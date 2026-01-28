@@ -1,11 +1,380 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniel Garcia Martinez — CV</title>
+
+    <!-- Tailwind CDN (perfect for starting fast on GitHub Pages) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Optional: Customize Tailwind via CDN -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["ui-sans-serif", "system-ui", "Segoe UI", "Roboto", "Helvetica", "Arial"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <meta name="description" content="CV Web de Daniel Garcia Martinez — Aspirante a Desarrollador de proyectos." />
+    <meta name="theme-color" content="#0f172a" />
+  </head>
+
+  <body class="bg-slate-50 text-slate-900 antialiased">
+    <!-- ====== Top bar / Nav ====== -->
+    <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur">
+    <div class="mx-auto max-w-5xl px-4 py-3">
+    <div class="grid items-center gap-3 md:grid-cols-3">
+      
+        <!-- LEFT: Name -->
+        <div class="flex items-center justify-center md:justify-start">
+            <p><em><strong>Daniel Garcia Martinez</strong></em></p>
+        </div>
+
+        <!-- CENTER: Navigation -->
+        <nav class="flex items-center justify-center gap-5 text-sm" aria-label="Navegación principal">
+            <a class="nav-link text-slate-600 hover:text-slate-900" href="#experiencia">Experiencia</a>
+            <a class="nav-link text-slate-600 hover:text-slate-900" href="#skills">Habilidades</a>
+            <a class="nav-link text-slate-600 hover:text-slate-900" href="#educacion">Educación</a>
+            <a class="nav-link text-slate-600 hover:text-slate-900" href="#certificados">Certificados</a>
+            <a class="nav-link text-slate-600 hover:text-slate-900" href="#contacto">Contacto</a>
+        </nav>
+
+        <!-- RIGHT: Short role text -->
+        <div class="flex items-center justify-center md:justify-end">
+            <p class="text-sm font-medium text-slate-600">
+            Practicante en procesos y proyectos
+            </p>
+        </div>
+
+        </div>
+    </div>
+    </header>
+
+
+    <!-- ====== Mobile jump menu ====== -->
+    <section id="menu" class="border-b border-slate-200 bg-white md:hidden">
+      <div class="mx-auto max-w-5xl px-4 py-3">
+        <div class="flex flex-wrap gap-2 text-sm">
+          <a class="rounded-full border border-slate-200 px-3 py-1" href="#experiencia">Experiencia</a>
+          <a class="rounded-full border border-slate-200 px-3 py-1" href="#skills">Habilidades</a>
+          <a class="rounded-full border border-slate-200 px-3 py-1" href="#educacion">Educación</a>
+          <a class="rounded-full border border-slate-200 px-3 py-1" href="#certificados">Certificados</a>
+          <a class="rounded-full border border-slate-200 px-3 py-1" href="#contacto">Contacto</a>
+          <a class="rounded-full border border-slate-200 px-3 py-1" href="#top">Arriba</a>
+        </div>
+      </div>
+    </section>
+
+    <main id="top" class="mx-auto max-w-5xl px-4">
+      <!-- ====== Hero ====== -->
+      <section class="py-10 md:py-14">
+        <div class="grid gap-6 md:grid-cols-3 md:items-start">
+          <div class="md:col-span-2">
+            <h1 class="text-3xl font-bold tracking-tight md:text-4xl">
+              Daniel Garcia Martinez
+            </h1>
+            <p class="mt-2 text-lg text-slate-600">
+              Aspirante a <span class="font-semibold text-slate-800">Desarrollador de proyectos</span>
+            </p>
+
+            <!-- Quick summary (optional) -->
+            <p class="mt-4 max-w-2xl text-slate-600">
+              Practicante en Seguridad de la Información con experiencia en soporte técnico, control de accesos,
+              gestión de permisos e incidencias críticas. Interés en desarrollo y automatización con enfoque
+              a procesos y eficiencia.
+            </p>
+
+          </div>
+
+          <!-- Contact card -->
+          <aside class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <h2 class="text-sm font-semibold tracking-wide text-slate-500">CONTACTO</h2>
+
+            <dl class="mt-4 space-y-3 text-sm">
+              <div>
+                <dt class="text-slate-500">Teléfono</dt>
+                <dd class="font-medium">+52 81 2910 3528</dd>
+              </div>
+              <div>
+                <dt class="text-slate-500">Email</dt>
+                <dd class="flex items-center justify-between gap-2 font-medium">
+                  <span id="emailText" class="truncate">danygarc4132@gmail.com</span>
+                  <button
+                    id="copyEmailBtn"
+                    class="rounded-lg border border-slate-200 px-2 py-1 text-xs text-slate-700 hover:bg-slate-50"
+                    type="button"
+                  >
+                    Copiar
+                  </button>
+                </dd>
+                <p id="copyHint" class="mt-1 hidden text-xs text-emerald-700">Copiado ✅</p>
+              </div>
+            </dl>
+
+            <div class="mt-4 flex gap-2">
+              <a
+                href="#"
+                class="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-center text-sm text-slate-700 hover:bg-slate-50"
+                >GitHub</a
+              >
+              <a
+                href="#"
+                class="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-center text-sm text-slate-700 hover:bg-slate-50"
+                >LinkedIn</a
+              >
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ====== Experience ====== -->
+      <section id="experiencia" class="scroll-mt-24 py-10">
+        <div class="flex items-end justify-between gap-4">
+          <h2 class="text-xl font-bold tracking-tight md:text-2xl">Experiencia profesional</h2>
+          <span class="text-sm text-slate-500">Actualizado: 2026</span>
+        </div>
+
+        <div class="mt-6 px-6 border-t border-slate-200 pt-6">
+          <div class="flex flex-col gap-1 md:flex-row md:items-center md:justify-between">
+            <p class="text-base font-semibold">
+              Practicante en Seguridad de la Información
+            </p>
+            <p class="text-sm text-slate-500">
+              Marzo 10 de 2025 – Actualidad
+            </p>
+          </div>
+
+          <p class="mt-1 text-sm text-slate-600">
+            Sector: Soporte Técnico en Control de accesos
+          </p>
+
+          <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-700">
+            <li>
+              Atendí más de <span class="font-semibold">1000 reportes</span> de requerimientos en plataformas de Banca Afirme,
+              gestionando accesos y permisos.
+            </li>
+            <li>
+              Resolví más de <span class="font-semibold">10 incidencias críticas</span> relacionadas con control de accesos,
+              eliminando bloqueos operativos de usuarios clave.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ====== Skills ====== -->
+      <section id="skills" class="scroll-mt-24 py-10">
+        <h2 class="text-xl font-bold tracking-tight md:text-2xl">Habilidades</h2>
+
+        <div class="mt-6 grid gap-4 md:grid-cols-2">
+          <!-- Soft skills -->
+          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h3 class="text-sm font-semibold tracking-wide text-slate-500">SOFT SKILLS</h3>
+            <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-700">
+              <li>Liderazgo</li>
+              <li>Auto gestión</li>
+              <li>Proactivo</li>
+              <li>Resolución de problemas</li>
+            </ul>
+          </div>
+
+          <!-- Tech stack -->
+          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h3 class="text-sm font-semibold tracking-wide text-slate-500">DESARROLLO EN</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Python</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">C#</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Java</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">HTML</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">CSS</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">JavaScript</span>
+            </div>
+
+            <h3 class="mt-6 text-sm font-semibold tracking-wide text-slate-500">TECNOLOGÍAS PARA DESARROLLO</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">VS Code</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">Visual Studio 2022</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">IntelliJ</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">GitHub</span>
+            </div>
+
+            <h3 class="mt-6 text-sm font-semibold tracking-wide text-slate-500">BASES DE DATOS</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">SQL</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">PL/SQL</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">MySQL</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== Education ====== -->
+      <section id="educacion" class="scroll-mt-24 py-10">
+        <h2 class="text-xl font-bold tracking-tight md:text-2xl">Educación</h2>
+
+        <div class="mt-6 space-y-4">
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex flex-col gap-1 md:flex-row md:items-center md:justify-between">
+              <h3 class="text-base font-semibold">Facultad de Contaduría Pública y Administración</h3>
+              <p class="text-sm text-slate-500">2022–2026</p>
+            </div>
+            <p class="mt-1 text-sm text-slate-600">Licenciatura en Tecnologías de la Información</p>
+          </article>
+
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex flex-col gap-1 md:flex-row md:items-center md:justify-between">
+              <h3 class="text-base font-semibold">Preparatoria #7 Unidad Puentes (Dr. Oscar Vela Cantú)</h3>
+              <p class="text-sm text-slate-500">2020–2022</p>
+            </div>
+            <p class="mt-1 text-sm text-slate-600">Bachillerato Bilingüe</p>
+          </article>
+
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h3 class="text-sm font-semibold tracking-wide text-slate-500">IDIOMAS</h3>
+            <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-700">
+              <li>Español — Nativo</li>
+              <li>Inglés — Intermedio</li>
+              <li>Portugués — Principiante</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- ====== Certificates ====== -->
+      <section id="certificados" class="scroll-mt-24 py-10">
+        <h2 class="text-xl font-bold tracking-tight md:text-2xl">Certificados</h2>
+
+        <div class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="text-base font-semibold">Microsoft Certified: Power BI Data Analyst Associate</h3>
+          <p class="mt-2 text-sm text-slate-700">
+            Con enfoque en la creación de dashboards interactivos y reportes analíticos para la toma de decisiones.
+          </p>
+
+          <!-- Optional: add credential link later -->
+          <div class="mt-4">
+            <a href="#" class="text-sm font-medium text-slate-900 underline underline-offset-4 hover:text-slate-700">
+              Ver credencial
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== Contact (bottom) ====== -->
+      <section id="contacto" class="scroll-mt-24 py-10">
+        <h2 class="text-xl font-bold tracking-tight md:text-2xl">Contacto</h2>
+
+        <div class="mt-6 grid gap-4 md:grid-cols-3">
+          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:col-span-2">
+            <p class="text-sm text-slate-600">
+              Si quieres contactarme, puedes escribirme por correo o conectar por LinkedIn. (Aquí luego agregas tus links reales).
+            </p>
+
+            <div class="mt-4 flex flex-wrap gap-2">
+              <a
+                href="mailto:danygarc4132@gmail.com"
+                class="inline-flex items-center justify-center rounded-lg bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800"
+              >
+                Enviar email
+              </a>
+              <a
+                href="#"
+                class="inline-flex items-center justify-center rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="#"
+                class="inline-flex items-center justify-center rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h3 class="text-sm font-semibold tracking-wide text-slate-500">DETALLES</h3>
+            <dl class="mt-4 space-y-3 text-sm">
+              <div>
+                <dt class="text-slate-500">Teléfono</dt>
+                <dd class="font-medium">+52 81 2910 3528</dd>
+              </div>
+              <div>
+                <dt class="text-slate-500">Email</dt>
+                <dd class="font-medium">danygarc4132@gmail.com</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <footer class="border-t border-slate-200 py-8 text-center text-sm text-slate-500">
+        © <span id="year"></span> Daniel Garcia Martinez · Hecho con HTML + Tailwind + JS
+      </footer>
+    </main>
+
+    <script>
+      // Footer year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Copy email button
+      const btn = document.getElementById("copyEmailBtn");
+      const emailText = document.getElementById("emailText");
+      const hint = document.getElementById("copyHint");
+
+      if (btn && emailText) {
+        btn.addEventListener("click", async () => {
+          try {
+            await navigator.clipboard.writeText(emailText.textContent.trim());
+            hint.classList.remove("hidden");
+            setTimeout(() => hint.classList.add("hidden"), 1200);
+          } catch (e) {
+            // fallback
+            const temp = document.createElement("textarea");
+            temp.value = emailText.textContent.trim();
+            document.body.appendChild(temp);
+            temp.select();
+            document.execCommand("copy");
+            document.body.removeChild(temp);
+            hint.classList.remove("hidden");
+            setTimeout(() => hint.classList.add("hidden"), 1200);
+          }
+        });
+      }
+
+      // Scrollspy: highlight nav link based on visible section
+      const sections = ["experiencia", "skills", "educacion", "certificados", "contacto"]
+        .map((id) => document.getElementById(id))
+        .filter(Boolean);
+
+      const navLinks = Array.from(document.querySelectorAll(".nav-link"));
+
+      const setActive = (id) => {
+        navLinks.forEach((a) => {
+          const isActive = a.getAttribute("href") === "#" + id;
+          a.classList.toggle("text-slate-900", isActive);
+          a.classList.toggle("font-semibold", isActive);
+          a.classList.toggle("text-slate-600", !isActive);
+        });
+      };
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          // pick the entry most visible
+          const visible = entries
+            .filter((e) => e.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+          if (visible?.target?.id) setActive(visible.target.id);
+        },
+        { root: null, threshold: [0.2, 0.35, 0.5], rootMargin: "-30% 0px -60% 0px" }
+      );
+
+      sections.forEach((sec) => observer.observe(sec));
+    </script>
+  </body>
 </html>
